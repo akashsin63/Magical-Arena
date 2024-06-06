@@ -21,15 +21,8 @@ public class Player {
     public int getAttack() {
         return attack;
     }
-    public void takeDamage(int damage) {
+    public void reduceHealth(int damage) {
         this.health = Math.max(this.health - damage, 0);
-    }
-    public int attack(Dice dice) {
-        return attack * dice.roll();
-    }
-
-    public int defend(Dice dice) {
-        return strength * dice.roll();
     }
     public boolean isAlive() {
         return this.health > 0;
